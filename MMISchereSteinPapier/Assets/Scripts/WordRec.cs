@@ -5,7 +5,7 @@ using System.Linq;
 public class WordRec : MonoBehaviour
 {
     // Define keywords (added cutter here as an extra for scissors)
-    private readonly string[] keywords = { "rock", "paper", "scissors", "cutter", "again", "go" };
+    private readonly string[] keywords = {"stein", "papier", "schere", "nochmal", "rock", "paper", "scissors", "cutter", "again", "go", "neu" };
 
     // Using KeywordRecognizer
     private KeywordRecognizer keywordRecognizer;
@@ -26,7 +26,7 @@ public class WordRec : MonoBehaviour
         Debug.Log("Recognized: " + args.text);
 
         //Case 1: Go again button ToDo: Only make it an option when game is not running
-        if (args.text.ToLower() == "go")
+        if (args.text.ToLower() == "go"||args.text.ToLower() == "nochmal"||args.text.ToLower() == "again"|| args.text.ToLower() == "neu")
         {
             GameManager.instance.ExecuteGameLoop();
         }
@@ -49,8 +49,14 @@ public class WordRec : MonoBehaviour
         {
             case "rock":
                 return RPSOption.Rock;
+            case "stein":
+            return RPSOption.Rock;
             case "paper":
                 return RPSOption.Paper;
+            case "papier":
+                return RPSOption.Paper;
+            case "schere":
+                return RPSOption.Scissors;
             case "scissors":
                 return RPSOption.Scissors;
             case "cutter":
