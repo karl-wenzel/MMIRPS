@@ -2849,6 +2849,9 @@ MonoBehaviour:
   paper: {fileID: 8300000, guid: d18086b091944284f85ddd9a0c05a975, type: 3}
   rock: {fileID: 8300000, guid: b44e81cef1eb0c942979f70af3d41f0b, type: 3}
   go_again: {fileID: 8300000, guid: 02291d414f3aaae4481643c121f172c3, type: 3}
+  you_loose: {fileID: 8300000, guid: 3f0c29a2e30ffc9498afd218a987327d, type: 3}
+  you_win: {fileID: 8300000, guid: 8bdaac37e8b32fd44960be508581b734, type: 3}
+  its_a_draw: {fileID: 8300000, guid: 3df083593a726284cb175482a83e5407, type: 3}
 --- !u!1 &1497282516
 GameObject:
   m_ObjectHideFlags: 0

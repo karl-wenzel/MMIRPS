@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ExecuteGameLoop();
+        AudioEffects.instance.PlayIntro();
     }
 
     public void ExecuteGameLoop()
@@ -47,9 +48,14 @@ public class GameManager : MonoBehaviour
     {
         OwnChoiceImg.sprite = GraphicsManager.instance.GetOption(option);
         ChoiceButtons.SetActive(false);
+        AudioEffects.instance.PlayOption(option);
         OpponentPicksArea.SetActive(true);
+        
         var opponentChoice = (RPSOption)Random.Range(0, System.Enum.GetValues(typeof(RPSOption)).Length);
+        
         OpponentSlotMachine.SetOption(opponentChoice);
+        await Awaitable.WaitForSecondsAsync(1.2f);
+        AudioEffects.instance.PlayOpponentOption(opponentChoice);
         await Awaitable.WaitForSecondsAsync(1f);
 
         var gameStatus = GameStatus.Draw;
@@ -75,12 +81,15 @@ public class GameManager : MonoBehaviour
         {
             case GameStatus.Draw:
                 WinLoose.text = "Noone wins.";
+                AudioEffects.instance.PlayDraw();
                 break;
             case GameStatus.Win:
                 WinLoose.text = "You win!";
+                AudioEffects.instance.PlayWin();
                 break;
             case GameStatus.Loose:
                 WinLoose.text = "You lost.";
+                AudioEffects.instance.PlayLoose();
                 break;
         }
 
@@ -90,6 +99,7 @@ public class GameManager : MonoBehaviour
 
     public void OnGoAgainClicked()
     {
+        AudioEffects.instance.PlayGoAgain();
         ExecuteGameLoop();
     }
 

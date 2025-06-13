@@ -28,7 +28,7 @@ public class WordRec : MonoBehaviour
         //Case 1: Go again button ToDo: Only make it an option when game is not running
         if (args.text.ToLower() == "go"||args.text.ToLower() == "nochmal"||args.text.ToLower() == "again"|| args.text.ToLower() == "neu")
         {
-            GameManager.instance.ExecuteGameLoop();
+            GameManager.instance.OnGoAgainClicked();
         }
         // ToDo: Only make it an option when game is running
         else
