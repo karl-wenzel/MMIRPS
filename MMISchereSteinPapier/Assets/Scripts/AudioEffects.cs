@@ -34,6 +34,11 @@ public class AudioEffects : MonoBehaviour
         src.Play();
     }
 
+    public void PlayNothing()
+    {
+        //TODO sound for nothing chosen
+    }
+
     //Scissor/Rock/Paper Opponent Sound
     public void PlayOpponentOption(RPSOption option)
     {
