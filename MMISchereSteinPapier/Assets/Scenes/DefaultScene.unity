@@ -2307,7 +2307,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 24.787842, y: 7.5491333}
+  m_AnchoredPosition: {x: 24.787842, y: 7.5490723}
   m_SizeDelta: {x: 3245.2847, y: 15.098633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1066277760
@@ -3388,14 +3388,15 @@ MonoBehaviour:
   scissors: {fileID: 8300000, guid: 7245b9d7b13903d428be9886477113b2, type: 3}
   paper: {fileID: 8300000, guid: d18086b091944284f85ddd9a0c05a975, type: 3}
   rock: {fileID: 8300000, guid: b44e81cef1eb0c942979f70af3d41f0b, type: 3}
-  go_again: {fileID: 8300000, guid: 02291d414f3aaae4481643c121f172c3, type: 3}
+  nothing: {fileID: 8300000, guid: 5406f4fc1f1a99a45813f871f9f57431, type: 3}
+  go_again: {fileID: 8300000, guid: b233666fda65d8348b696603725e5132, type: 3}
   you_loose: {fileID: 8300000, guid: 3f0c29a2e30ffc9498afd218a987327d, type: 3}
   you_win: {fileID: 8300000, guid: 8bdaac37e8b32fd44960be508581b734, type: 3}
   its_a_draw: {fileID: 8300000, guid: 3df083593a726284cb175482a83e5407, type: 3}
-  opponent_scissors: {fileID: 0}
-  opponent_paper: {fileID: 0}
-  opponent_rock: {fileID: 0}
-  intro: {fileID: 0}
+  opponent_scissors: {fileID: 8300000, guid: 75b0950973a319a459ef1d7743827edd, type: 3}
+  opponent_paper: {fileID: 8300000, guid: 710b999855110a94b80e91e47a18a3ff, type: 3}
+  opponent_rock: {fileID: 8300000, guid: f9a70d852fdc6ae4e810b430773d2724, type: 3}
+  intro: {fileID: 8300000, guid: 3a304a1d4a808e84694545343d0e5b68, type: 3}
 --- !u!1 &1478313755
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class AudioEffects : MonoBehaviour
     public static AudioEffects instance;
     public AudioSource src;
     //List of all clips used
-    public AudioClip scissors, paper, rock, go_again, you_loose, you_win, its_a_draw, opponent_scissors, opponent_paper, opponent_rock, intro;
+    public AudioClip scissors, paper, rock, nothing, go_again, you_loose, you_win, its_a_draw, opponent_scissors, opponent_paper, opponent_rock, intro;
 
     private void Awake()
     {
@@ -17,7 +17,9 @@ public class AudioEffects : MonoBehaviour
         if (option == RPSOption.Scissors) PlayScissors();
         else if (option == RPSOption.Rock) PlayRock();
         else if (option == RPSOption.Paper) PlayPaper();
+        else PlayNothing();
     }
+    
     public void PlayScissors()
     {
         src.clip = scissors;
@@ -36,7 +38,8 @@ public class AudioEffects : MonoBehaviour
 
     public void PlayNothing()
     {
-        //TODO sound for nothing chosen
+        src.clip = nothing;
+        src.Play();
     }
 
     //Scissor/Rock/Paper Opponent Sound
